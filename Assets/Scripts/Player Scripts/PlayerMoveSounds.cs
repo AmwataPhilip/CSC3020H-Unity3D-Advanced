@@ -32,7 +32,7 @@ public class PlayerMoveSounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SoundChecker();
+        SoundChecker(); // Call SoundChecker method every frame
     }
 
     void SoundChecker()
@@ -43,13 +43,12 @@ public class PlayerMoveSounds : MonoBehaviour
             // Check to see if object is moving (player)
             if (charController.velocity.sqrMagnitude > 0)
             {
-                distanceMoved += Time.deltaTime;
+                distanceMoved += Time.deltaTime; // Increment distance moved
                 if (distanceMoved > stepDistance)
                 {
                     footstepSound.volume = Random.Range(volumeMin, volumeMax); // Set play volume to random value
                     footstepSound.clip = footstepClips[Random.Range(0, footstepClips.Length)]; // Get random audio clip to play
-                    footstepSound.Play();
-                    print("Playing sound");
+                    footstepSound.Play(); // Play random sound clip
 
                     distanceMoved = 0.0f; // Reset distance moved by player
                 }
@@ -61,7 +60,7 @@ public class PlayerMoveSounds : MonoBehaviour
         }
         else
         {
-            return;
+            return; // Exit funciton
         }
 
     }
