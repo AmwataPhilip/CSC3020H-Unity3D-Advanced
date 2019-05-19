@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{55F60AA7-B546-9B5C-E7B4-1CF3931D7F41}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player Scripts/PlayerAxeSound.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Weapon Scripts/Raycast.cs">
     <Files>
       <File FileName="Assets/Scripts/Player Scripts/MouseController.cs" Line="129" Column="10" />
       <File FileName="Assets/Scripts/Player Scripts/PlayerSprintCrouch.cs" Line="66" Column="101" />
@@ -11,8 +11,8 @@
       <File FileName="Assets/Scripts/Player Scripts/PlayerAttacc.cs" Line="25" Column="40" />
       <File FileName="Assets/Scripts/Camera Scripts/ThirdCamera.cs" Line="61" Column="6" />
       <File FileName="Assets/Scripts/Camera Scripts/ChaseCamera.cs" Line="48" Column="29" />
-      <File FileName="Assets/Scripts/Scene Scripts/SpawnEnemies.cs" Line="21" Column="65" />
-      <File FileName="Assets/Scripts/Player Scripts/PlayerAxeSound.cs" Line="13" Column="1" />
+      <File FileName="Assets/Scripts/Scene Scripts/SpawnEnemies.cs" Line="14" Column="22" />
+      <File FileName="Assets/Scripts/Weapon Scripts/Raycast.cs" Line="22" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,8 +20,11 @@
           <Node name="CSC3020H-Unity3D-Advanced" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Player Scripts" expanded="True">
-                  <Node name="PlayerAxeSound.cs" selected="True" />
+                <Node name="Camera Scripts" expanded="True" />
+                <Node name="Player Scripts" expanded="True" />
+                <Node name="Scene Scripts" expanded="True" />
+                <Node name="Weapon Scripts" expanded="True">
+                  <Node name="Raycast.cs" selected="True" />
                 </Node>
               </Node>
             </Node>

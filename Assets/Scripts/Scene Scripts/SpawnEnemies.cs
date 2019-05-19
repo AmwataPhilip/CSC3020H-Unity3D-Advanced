@@ -7,21 +7,25 @@ public class SpawnEnemies : MonoBehaviour
     [SerializeField]
     private GameObject enemyModel;
 
-    private int count = 0;
+    private float timer = 0;
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        StartCoroutine(SpawnEnemy());
+        SpawnEnemy();
     }
 
-    IEnumerator SpawnEnemy()
+    void SpawnEnemy()
     {
-        while (count <= 20)
+        if(timer >= 5.0f)
         {
-            yield return new WaitForSeconds(Random.Range(5.0f, 15.0f));
-            Vector3 randPos = new Vector3(Random.Range(1.0f, 15.0f), 0.5f, Random.Range(1.0f, 15.0f));
+            Vector3 randPos = new Vector3(Random.Range(1.0f, 100.0f), 0.0f, Random.Range(1.0f, 100.0f));
             Instantiate(enemyModel, randPos, Quaternion.identity);
-            count++;
+            timer = 0;
         }
+        else
+        {
+            timer += Time.deltaTime;
+        }
+
     }
 }
