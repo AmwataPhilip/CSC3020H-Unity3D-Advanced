@@ -36,6 +36,12 @@ public class MouseController : MonoBehaviour
     [SerializeField]
     private Vector2 defaultViewLimits = new Vector2(-70.0f, 80.0f);
 
+    [SerializeField]
+    private GameObject PauseMenu;
+
+    [SerializeField]
+    private bool isPaused;
+
     private Vector2 viewAngles;
     private Vector2 currentMouseView;
     private Vector2 smoothMove;
@@ -66,6 +72,16 @@ public class MouseController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            if (!isPaused)
+            {
+                ActivatePauseMenu();
+                isPaused = true;
+            }
+            else if (isPaused)
+            {
+                DeactivatePauseMenu();
+                isPaused = false;
+            }
             if(Cursor.lockState == CursorLockMode.Locked)
             {
                 Cursor.lockState = CursorLockMode.None;
@@ -92,5 +108,27 @@ public class MouseController : MonoBehaviour
 
         viewRoot.localRotation = Quaternion.Euler(viewAngles.x, 0.0f, 0.0f);
         playerRoot.localRotation = Quaternion.Euler(0.0f, viewAngles.y, 0.0f);
+    }
+
+    void ActivatePauseMenu()
+    {
+        Time.timeScale = 0;
+        PauseMenu.SetActive(true);
+    }
+
+    public void DeactivatePauseMenu()
+    {
+        if (Cursor.lockState == CursorLockMode.Locked)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        Time.timeScale = 1;
+        PauseMenu.SetActive(false);
+        isPaused = false;
     }
 }

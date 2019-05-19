@@ -62,11 +62,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Camera Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Camera Scripts\ChaseCamera.cs" />
+    <Compile Include="Assets\Scripts\Camera Scripts\ThirdCamera.cs" />
     <Compile Include="Assets\Scripts\Helper Scripts\Tags.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\MouseController.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\PlayerAttacc.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerMoveSounds.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerSprintCrouch.cs" />
+    <Compile Include="Assets\Scripts\Scene Scripts\SceneControls.cs" />
+    <Compile Include="Assets\Scripts\Weapon Scripts\WeaponController.cs" />
+    <Compile Include="Assets\Scripts\Weapon Scripts\WeaponManager.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/philipamwata/Documents/GitHub/CSC3020H-Unity3D-Advanced/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
