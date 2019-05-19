@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ThirdCamera : MonoBehaviour
 {
@@ -18,6 +19,15 @@ public class ThirdCamera : MonoBehaviour
 
     public bool rotateY = true;
 
+    [SerializeField]
+    private InputField inputHeight;
+
+    [SerializeField]
+    private InputField inputRadius;
+
+    [SerializeField]
+    private InputField inputSpeed;
+
 
     void FixedUpdate()
     {
@@ -32,28 +42,31 @@ public class ThirdCamera : MonoBehaviour
         }
     }
 
-    public void SetHeight(float h)
+    public void SetHeight(string h)
     {
-        this.height = h;
+        height = float.Parse(h);
+        inputHeight.text = "";
     }
 
-    public void SetRadius(float r)
+    public void SetRadius(string r)
     {
-        this.radius = r;
+        radius = float.Parse(r);
+        inputRadius.text = "";
     }
 
-    public void SetRotationSpeed(float rS)
+    public void SetRotationSpeed(string rS)
     {
-        this.rotateSpeed = rS;
+        rotateSpeed = float.Parse(rS);
+        inputSpeed.text = "";
     }
 
     public void DeactivateRotation()
     {
-        this.rotateY = false;
+        rotateY = false;
     }
 
     public void ActivateRotation()
     {
-        this.rotateY = true;
+        rotateY = true;
     }
 }

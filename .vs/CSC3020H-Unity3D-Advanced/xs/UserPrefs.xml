@@ -9,8 +9,8 @@
       <File FileName="Assets/Scripts/Weapon Scripts/WeaponController.cs" Line="27" Column="39" />
       <File FileName="Assets/Scripts/Weapon Scripts/WeaponManager.cs" Line="36" Column="20" />
       <File FileName="Assets/Scripts/Player Scripts/PlayerAttacc.cs" Line="25" Column="40" />
-      <File FileName="Assets/Scripts/Camera Scripts/ThirdCamera.cs" Line="21" Column="1" />
-      <File FileName="Assets/Scripts/Camera Scripts/ChaseCamera.cs" Line="26" Column="1" />
+      <File FileName="Assets/Scripts/Camera Scripts/ThirdCamera.cs" Line="47" Column="38" />
+      <File FileName="Assets/Scripts/Camera Scripts/ChaseCamera.cs" Line="24" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

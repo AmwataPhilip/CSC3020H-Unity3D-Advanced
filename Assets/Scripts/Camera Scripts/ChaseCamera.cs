@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChaseCamera : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class ChaseCamera : MonoBehaviour
     [SerializeField]
     private Vector3 offset;
 
+    [SerializeField]
+    private InputField inputDistance;
+
+    [SerializeField]
+    private InputField inputSpeed;
 
 
     void FixedUpdate()
@@ -30,13 +36,15 @@ public class ChaseCamera : MonoBehaviour
         }
     }
 
-    public void SetCameraDistance(float d)
+    public void SetCameraDistance(string d)
     {
-        cameraDistance = d;
+        cameraDistance = float.Parse(d);
+        inputDistance.text = "";
     }
 
-    public void SetCameraSpeed (float s)
+    public void SetCameraSpeed (string s)
     {
-        cameraSpeed = s;
+        cameraSpeed = float.Parse(s);
+        inputSpeed.text = "";
     }
 }
